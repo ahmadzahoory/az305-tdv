@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "vnetName": {
+        "value": "n-tier_vnet"
+      },
+      "vnetAddressPrefix": {
+        "value": "192.168.0.0/22"
+      },
+      "subnets": {
+        "value": [
+          {
+            "name": "lbsubnet",
+            "addressPrefix": "192.168.0.0/24"
+          },
+		 {
+            "name": "azurebastionsubnet",
+            "addressPrefix": "192.168.1.0/24"
+          },
+		 {
+            "name": "vmsubnet",
+            "addressPrefix": "192.168.2.0/24"
+          },
+		 {
+            "name": "dbsubnet",
+            "addressPrefix": "192.168.3.0/24"
+          }
+        ]
+      }
+    }
+  }
+  
